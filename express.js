@@ -19,7 +19,7 @@ socket.broadcast.emit("onstart",point);
     socket.on("end",function(point){
 socket.broadcast.emit("onend",point)
     })
-    socket.on("redo",function(redoStack){
+    /*socket.on("redo",function(redoStack){
         socket.broadcast.emit("onredo",redoStack)
     })
     socket.on("undo",function(undoStack){
@@ -27,7 +27,7 @@ socket.broadcast.emit("onend",point)
     })
     socket.on("tool",function(tool){
         socket.broadcast.emit("ontool",tool)
-    })
+    })*/
 });
 // folder designated from which client can get files
 app.use(express.static('public'));
@@ -35,5 +35,6 @@ app.use(express.static('public'));
 const port = process.env.PORT||3002
 
 server.listen(3002, function () {
-    console.log("Server started at port 3002")
+    console.log("Server started at port 3002");
+
 })
