@@ -18,7 +18,7 @@ ctx.lineWidth=width;
     ctx.lineTo(x, y);
     ctx.stroke();
 })
-socket.on("onredo",function(redoStack){
+/*socket.on("onredo",function(redoStack){
     if(redoStack.length>0){
         redraw();
     }
@@ -31,4 +31,4 @@ socket.on("onundo",function(undoStack){
 })
 socket.on("ontool",function(tool){
     handleClick(tool)
-})
+})*/

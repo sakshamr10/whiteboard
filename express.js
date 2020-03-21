@@ -8,7 +8,7 @@ const io = require('socket.io')(server);
 
 //listen socket connection 
 io.on('connection', function (socket) {
-    //console.log(socket.id)
+    console.log(socket.id)
     socket.on("color", function (color) {
         socket.broadcast.emit("oncolorChange", color);
     })
@@ -32,8 +32,7 @@ socket.broadcast.emit("onend",point)
 // folder designated from which client can get files
 app.use(express.static('public'));
 // server start
-const port = process.env.PORT||3000;
 
-server.listen(3000, function () {
-    console.log("Server started at port 3000")
+server.listen(3002, function () {
+    console.log("Server started at port 3002")
 })

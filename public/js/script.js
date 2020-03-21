@@ -63,7 +63,7 @@ redo.addEventListener("mousedown",function(){
   interval = setInterval(function () {
     if(redoStack.length>0){
     undoStack.push( redoStack.pop());
-    socket.emit("redo",redoStack)
+    //socket.emit("redo",redoStack)
       redraw();
 
     }
@@ -81,7 +81,7 @@ undo.addEventListener("mousedown", function () {
     
     if(undoStack.length>0){
     redoStack.push( undoStack.pop());
-    socket.emit("undo",undoStack)
+    //socket.emit("undo",undoStack)
       redraw();
 
     }

@@ -1,5 +1,5 @@
 // socket is established
-const socket = io.connect('http://localhost:3000');
+const socket = io.connect('http://localhost:3002');
 console.log("Inside tool");
 let isActive = "pencil";
 let pencilOptions = document.querySelector(".pencil-options")
@@ -29,7 +29,7 @@ function handleClick(tool){
     } else if (tool == "sticky") {
         createSticky();
     }
-    socket.emit("tool",tool)
+    //socket.emit("tool",tool)
 }
 
 
