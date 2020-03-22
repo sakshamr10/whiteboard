@@ -1,5 +1,5 @@
 // socket is established
-const socket = io.connect('http://localhost:3002');
+const socket = io.connect('https://noteswhiteboard.herokuapp.com:3002');
 console.log("Inside tool");
 let isActive = "pencil";
 let pencilOptions = document.querySelector(".pencil-options")
