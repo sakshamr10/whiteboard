@@ -7,3 +7,10 @@ zoomin.addEventListener("click",function(){
     ctx.translate(-60,-10);
     redraw();
 })
+zoomout.addEventListener("click",function(){
+    // canvas scale up twice
+    ctx.scale(0.95,0.95);
+
+    ctx.translate(60,10);
+    redraw();
+})

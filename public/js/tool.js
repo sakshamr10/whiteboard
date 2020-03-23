@@ -32,17 +32,21 @@ function handleClick(tool){
     //socket.emit("tool",tool)
 }
 
-
+//handle color change
 function handleColorChange(color) {
 
     ctx.strokeStyle = color;
     socket.emit("color", color);
 }
+//handle size change
+function sizeChange(value) {
+    ctx.lineWidth = value;
+   // socket.emit("size", value);
+  }
 
 
 
-
-let inputArr = document.getElementsByTagName("input");
+/*let inputArr = document.getElementsByTagName("input");
 inputArr[0].addEventListener("change", function (e) {
     ctx.lineWidth = inputArr[0].value
-})
+})*/

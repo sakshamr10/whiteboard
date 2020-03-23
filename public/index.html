@@ -21,7 +21,7 @@
                                              
                     <div class = "pencil-options tool-options">
                         <div class="pencil-slider">
-                            <input type="range" name ="" id ="" max="40" min="5" value="5">
+                            <input type="range" name ="" id ="" max="40" min="5" value="5" onchange="sizeChange(this.value)">
                         </div>
                         <div class="pencil-colors">
                             <div class="color red" onclick="handleColorChange('red')"></div>
@@ -35,7 +35,11 @@
             <div class = "tool">    
                 <div class = "eraser" onclick="handleClick('eraser')">
                     <img src = "NewIcons/Eraser.svg" alt ="" class = 'eraser-image img-size'>
-                    <div class = "eraser-options tool-options"></div>    
+                    <div class = "eraser-options tool-options">
+                        <div class="eraser-slider">
+                            <input type="range" name ="" id ="" max="40" min="5" value="5" onchange="sizeChange(this.value)">
+                        </div>    
+                    </div>    
                 </div>
             </div>
             <div class="tool">
@@ -59,9 +63,10 @@
             <div class="tool">
                 <img src="NewIcons/zoomout.png" alt="" class="img-size zoomout">
             </div>
-<div class="div">
-        <input type = "file" name = "" id = "inputFile" >
-</div>
+            <div class="div">
+                <input type = "file" name = ""  class = "input-img" accept="image/*">
+                <img src="NewIcons/upload.jpg" alt="" class="img-size upload-img">
+            </div>
             <div class="div"></div>
             <div class="tool">
                 <img src="NewIcons/Download.svg" alt="" class="img-size upload" onclick="download()">

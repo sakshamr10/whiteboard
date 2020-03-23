@@ -55,7 +55,7 @@
 .tool-options{
     height:6rem;
     width:12rem;
-    background-color:green;
+    background-color:white;
     position: absolute;
     top:4rem;
     left:-4rem;
@@ -73,6 +73,11 @@
     height:50%;
     width:100%;
     background-color:brown;
+}
+.eraser-slider{
+    height:50%;
+    width:100%;
+    background: goldenrod;
 }
 .color{
     height:90%;
@@ -96,4 +101,12 @@
 .nav-bar{
     display: flex;
     
+}
+.input-img{
+    display: none;
+}
+.uploadedImgStyle{
+    top:20vh;
+    width:20rem;
+    left:40rem;
 }
