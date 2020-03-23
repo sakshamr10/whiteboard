@@ -32,9 +32,9 @@ socket.broadcast.emit("onend",point)
 // folder designated from which client can get files
 app.use(express.static('public'));
 // server start
-const port = process.env.PORT||3002
+const port = process.env.PORT || 3002;
 
-server.listen(3002, function () {
-    console.log("Server started at port 3002");
+server.listen(port, function () {
+    console.log(`Server started at ${port}`);
 
 })
