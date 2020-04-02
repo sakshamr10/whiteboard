@@ -81,44 +81,5 @@ function download(){
       img.height = 60;
       const body=document.querySelector("body");
       body.appendChild(img);
-  })
-    let isStickyDown = false;
+  })*/
   
-    let initialX = null;
-    let initialY = null;
-
-    stickyPad.addEventListener("mousedown", function(e) {
-      initialX = e.clientX;
-      initialY = e.clientY;
-      isStickyDown = true;
-    });
-  
-  
-  
-  
-    stickyPad.addEventListener("mousemove", function(e) {
-      if (isStickyDown == false) return;
-  
-      let finalX = e.clientX;
-      let finalY = e.clientY;
-      let diffX = finalX - initialX;
-      let diffY = finalY - initialY;
-      
-      let { top, left } = stickyPad.getBoundingClientRect();
-      
-      stickyPad.style.top = top + diffY + "px";
-  
-      stickyPad.style.left = left + diffX + "px";
-      
-      initialX = finalX;
-      initialY = finalY;
-    });
-  
-  
-  //   precaution
-    stickyPad.addEventListener("mouseleave", function() {
-      isStickyDown = false;
-    });
-    stickyPad.addEventListener("mouseup",function(){
-        isStickyDown=false;
-    })*/

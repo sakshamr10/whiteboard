@@ -3,15 +3,21 @@ const socket = io.connect('https://noteswhiteboard.herokuapp.com:3002');
 console.log("Inside tool");
 let isActive = "pencil";
 let pencilOptions = document.querySelector(".pencil-options")
+let pencilSlider = document.querySelector(".pencil-slider")
+let eraserSlider = document.querySelector(".eraser-slider")
 let eraserOptions = document.querySelector(".eraser-options");
 function handleClick(tool){
     if (tool == "pencil") {
         if (isActive == "pencil") {
             pencilOptions.classList.add("show")
+            pencilSlider.classList.add("show")
+            
         } else {
             isActive = "pencil";
 
             ctx.strokeStyle = "black";
+            eraserSlider.classList.remove("show")
+            pencilSlider.classList.add("show")
             eraserOptions.classList.remove("show")
 
         }
@@ -21,6 +27,7 @@ function handleClick(tool){
             eraserOptions.classList.add("show")
         } else {
             isActive = "eraser";
+            pencilSlider.classList.remove("show")
             pencilOptions.classList.remove("show")
 
             ctx.strokeStyle = "white";
